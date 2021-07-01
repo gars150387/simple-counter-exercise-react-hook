@@ -50,12 +50,12 @@ export function Home() {
 		}, 86400000);
 	}, []);
 	return (
-		<div className="text-center text-white mt-5 d-flex justify-content-evenly">
-			<div className="col-md-6 ms-md-auto bg-dark m-auto rounded">
-				<span className="">
-					<i className="far fa-clock"></i>
-				</span>
-				<div className="">
+		<div className="text-center text-white mt-5 justify-content-between">
+			<div className="col-md-6 ms-md-auto bg-dark m-auto rounded d-print-inline">
+				<div className="row justify-content-between">
+					<span className="">
+						<i className="far fa-clock"></i>
+					</span>
 					<p>{counter5}</p>
 					<p>{counter4}</p>
 					<p>{counter3}</p>
