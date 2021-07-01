@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 export function Home() {
 	const [counter, setCounter] = useState(0);
 	const [counter2, setCounter2] = useState(0);
@@ -46,7 +42,7 @@ export function Home() {
 	useEffect(() => {
 		setInterval(() => {
 			setCounter4(counter4 => counter4 + 1);
-		}, 1000000);
+		}, 600000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
@@ -57,8 +53,11 @@ export function Home() {
 		<div className="text-center text-white mt-5">
 			<div className="col-md-6 ms-md-auto bg-dark m-auto rounded">
 				<p>
-					{counter5}+`&ldquo;`+{counter4}+`&ldquo;`+{counter3}
-					+`&ldquo;`+{counter2}+`&ldquo;`+{counter}
+					{counter5}
+					{counter4}
+					{counter3}
+					{counter2}
+					{counter}
 				</p>
 			</div>
 		</div>
