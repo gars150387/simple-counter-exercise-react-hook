@@ -41,7 +41,7 @@ export function Home() {
 	useEffect(() => {
 		setInterval(() => {
 			setCounter3(counter3 => counter3 + 1);
-		}, 100000);
+		}, 60000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
@@ -54,12 +54,13 @@ export function Home() {
 		}, 10000000);
 	}, []);
 	return (
-		<div className="text-center mt-5">
-			<p>{counter}</p>
-			<p>{counter2}</p>
-			<p>{counter3}</p>
-			<p>{counter4}</p>
-			<p>{counter5}</p>
+		<div className="text-center text-white mt-5">
+			<div className="col-md-6 ms-md-auto bg-dark m-auto rounded">
+				<p>
+					{counter5}+`&ldquo;`+{counter4}+`&ldquo;`+{counter3}
+					+`&ldquo;`+{counter2}+`&ldquo;`+{counter}
+				</p>
+			</div>
 		</div>
 	);
 }
