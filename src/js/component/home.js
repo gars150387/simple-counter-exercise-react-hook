@@ -13,13 +13,13 @@ export function Home() {
 	if (counter2 === 6) {
 		setCounter2(0);
 	}
-	if (counter3 === 24) {
+	if (counter3 === 60) {
 		setCounter3(0);
 	}
-	if (counter4 === 30) {
+	if (counter4 === 24) {
 		setCounter4(0);
 	}
-	if (counter5 === 12) {
+	if (counter5 === 31) {
 		setCounter5(0);
 	}
 
@@ -42,23 +42,26 @@ export function Home() {
 	useEffect(() => {
 		setInterval(() => {
 			setCounter4(counter4 => counter4 + 1);
-		}, 600000);
+		}, 3600000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
 			setCounter5(counter5 => counter5 + 1);
-		}, 10000000);
+		}, 86400000);
 	}, []);
 	return (
-		<div className="text-center text-white mt-5">
+		<div className="text-center text-white mt-5 d-flex justify-content-evenly">
 			<div className="col-md-6 ms-md-auto bg-dark m-auto rounded">
-				<p>
-					{counter5}
-					{counter4}
-					{counter3}
-					{counter2}
-					{counter}
-				</p>
+				<span className="">
+					<i className="far fa-clock"></i>
+				</span>
+				<div className="">
+					<p>{counter5}</p>
+					<p>{counter4}</p>
+					<p>{counter3}</p>
+					<p>{counter2}</p>
+					<p>{counter}</p>
+				</div>
 			</div>
 		</div>
 	);
