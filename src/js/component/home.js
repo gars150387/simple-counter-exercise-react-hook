@@ -37,12 +37,12 @@ export function Home() {
 	useEffect(() => {
 		setInterval(() => {
 			setCounter3(counter3 => counter3 + 1);
-		}, 60000);
+		}, 100000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
 			setCounter4(counter4 => counter4 + 1);
-		}, 3600000);
+		}, 100000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
