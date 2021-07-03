@@ -38,7 +38,7 @@ export function Home() {
 	useEffect(() => {
 		setInterval(() => {
 			setCounter3(counter3 => counter3 + 1);
-		}, 1000000);
+		}, 100000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
@@ -51,7 +51,7 @@ export function Home() {
 		}, 10000000000);
 	}, []);
 	return (
-		<div className="col-6 content-justify-center d-flex bg-dark">
+		<div className="col-6 align-self-center d-flex bg-dark">
 			<i
 				className="far fa-clock fa-2x d-flex"
 				style={{ maxWidth: "18rem" }}></i>
