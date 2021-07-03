@@ -51,15 +51,17 @@ export function Home() {
 		}, 10000000000);
 	}, []);
 	return (
-		<div className="col-6 align-self-center d-flex bg-dark">
-			<i
-				className="far fa-clock fa-2x d-flex"
-				style={{ maxWidth: "18rem" }}></i>
-			<Card number={counter5} />
-			<Card number={counter4} />
-			<Card number={counter3} />
-			<Card number={counter2} />
-			<Card number={counter} />
+		<div className="row justify-content-center mt-5 border-rounded">
+			<div className="col-4 align-self-center d-flex bg-dark">
+				<i
+					className="far fa-clock fa-2x d-flex mt-3"
+					style={{ maxWidth: "18rem", color: "white" }}></i>
+				<Card number={counter5} />
+				<Card number={counter4} />
+				<Card number={counter3} />
+				<Card number={counter2} />
+				<Card number={counter} />
+			</div>
 		</div>
 	);
 }
