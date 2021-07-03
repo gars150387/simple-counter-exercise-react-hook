@@ -38,20 +38,20 @@ export function Home() {
 	useEffect(() => {
 		setInterval(() => {
 			setCounter3(counter3 => counter3 + 1);
-		}, 100000);
+		}, 1000000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
 			setCounter4(counter4 => counter4 + 1);
-		}, 100000);
+		}, 100000000);
 	}, []);
 	useEffect(() => {
 		setInterval(() => {
 			setCounter5(counter5 => counter5 + 1);
-		}, 86400000);
+		}, 10000000000);
 	}, []);
 	return (
-		<div className="col-6 content-justify-center d-flex">
+		<div className="col-6 content-justify-center d-flex bg-dark">
 			<i
 				className="far fa-clock fa-2x d-flex"
 				style={{ maxWidth: "18rem" }}></i>
