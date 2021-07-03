@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Card from "./card";
 
 export function Home() {
 	const [counter, setCounter] = useState(0);
@@ -10,16 +11,16 @@ export function Home() {
 	if (counter === 10) {
 		setCounter(0);
 	}
-	if (counter2 === 6) {
+	if (counter2 === 10) {
 		setCounter2(0);
 	}
-	if (counter3 === 60) {
+	if (counter3 === 100) {
 		setCounter3(0);
 	}
-	if (counter4 === 24) {
+	if (counter4 === 1000) {
 		setCounter4(0);
 	}
-	if (counter5 === 31) {
+	if (counter5 === 10000) {
 		setCounter5(0);
 	}
 
@@ -50,19 +51,15 @@ export function Home() {
 		}, 86400000);
 	}, []);
 	return (
-		<div className="text-center text-white mt-5 justify-content-between">
-			<div className="col-md-6 ms-md-auto bg-dark m-auto rounded d-print-inline">
-				<div className="row justify-content-between">
-					<span className="">
-						<i className="far fa-clock"></i>
-					</span>
-					<p>{counter5}</p>
-					<p>{counter4}</p>
-					<p>{counter3}</p>
-					<p>{counter2}</p>
-					<p>{counter}</p>
-				</div>
-			</div>
+		<div className="col-6 content-justify-center d-flex">
+			<i
+				className="far fa-clock fa-2x d-flex"
+				style={{ maxWidth: "18rem" }}></i>
+			<Card number={counter5} />
+			<Card number={counter4} />
+			<Card number={counter3} />
+			<Card number={counter2} />
+			<Card number={counter} />
 		</div>
 	);
 }
