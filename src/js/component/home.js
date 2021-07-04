@@ -52,7 +52,7 @@ export function Home() {
 	}, []);
 	return (
 		<div className="row justify-content-center mt-5 border-rounded">
-			<div className="col-4 align-self-center d-flex bg-dark">
+			<div className="col-3 justify-content-center d-flex bg-dark">
 				<i
 					className="far fa-clock fa-2x d-flex mt-3"
 					style={{ maxWidth: "18rem", color: "white" }}></i>
