@@ -7,7 +7,7 @@ const Counter = ({ time }) => {
 		setCounter(0);
 	}
 	useEffect(() => {
-		setInterval(() => {
+		const id = setInterval(() => {
 			setCounter(counter => counter + 1);
 		}, time);
 	}, []);

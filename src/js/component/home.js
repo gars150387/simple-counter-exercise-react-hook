@@ -13,8 +13,8 @@ export function Home() {
 					style={{ maxWidth: "18rem", color: "white" }}></i>
 				{time.map((element, index) => {
 					return (
-						<div key="index">
-							<Card counter={<Counter time={element[index]} />} />
+						<div key="element">
+							<Card number={<Counter time={element} />} />
 						</div>
 					);
 				})}
