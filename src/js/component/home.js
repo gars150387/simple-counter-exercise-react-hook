@@ -11,9 +11,9 @@ export function Home() {
 				<i
 					className="far fa-clock fa-2x d-flex mt-3"
 					style={{ maxWidth: "18rem", color: "white" }}></i>
-				{time.map((element, index) => {
+				{time.map(element => {
 					return (
-						<div key="element">
+						<div key={element}>
 							<Card number={<Counter time={element} />} />
 						</div>
 					);
