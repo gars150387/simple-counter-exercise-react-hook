@@ -1,3 +1,4 @@
+import { element } from "prop-types";
 import React from "react";
 import Card from "./card";
 import Counter from "./counter";
@@ -10,12 +11,19 @@ export function Home() {
 				<i
 					className="far fa-clock fa-2x d-flex mt-3"
 					style={{ maxWidth: "18rem", color: "white" }}></i>
-				<Card number={<Counter time={time[0]} />} />
-				<Card number={<Counter time={time[1]} />} />
-				<Card number={<Counter time={time[2]} />} />
-				<Card number={<Counter time={time[3]} />} />
-				<Card number={<Counter time={time[4]} />} />
-				<Card number={<Counter time={time[5]} />} />
+				{time.map((element, index) => {
+					return (
+						<div key="index">
+							<Card counter={<Counter time={element[index]} />} />
+						</div>
+					);
+				})}
+				{/* <Card counter={<Counter time={time[0]} />} />
+				<Card counter={<Counter time={time[1]} />} />
+				<Card counter={<Counter time={time[2]} />} />
+				<Card counter={<Counter time={time[3]} />} />
+				<Card counter={<Counter time={time[4]} />} />
+				<Card counter={<Counter time={time[5]} />} /> */}
 			</div>
 		</div>
 	);

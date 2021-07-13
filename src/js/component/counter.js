@@ -14,7 +14,7 @@ const Counter = ({ time }) => {
 	return <p className="card-text">{counter}</p>;
 };
 Counter.propTypes = {
-	time: PropTypes.time
+	time: PropTypes.number
 };
 
 export default Counter;
